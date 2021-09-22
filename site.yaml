@@ -3,11 +3,15 @@
   tasks:
     - name: "Crear usuario"
         user:
-            name: lpruna
+            name: larap
             password: $y$j9T$VXxYB3E62Xy6H0izfHqzu0$ZIPgKuV4nft0wDdYGiuGM5HB6z9wvqkTroGVe9ktFL5
-            home: /home/lpruna
+            home: /home/larap
             groups: sudo
             shell: /bin/bash
     - name: "Descargar fichero de una url"
         get_url:
             dest: https://wordpress.org/latest.zip
+    - name: "Descomprimir fichero"
+        unarchive:
+            src: wordpress-5.8.1.zip
+            dest: /home/larap

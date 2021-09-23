@@ -17,3 +17,6 @@
         remote_src: yes
         src: /home/larap/wordpress-5.8.1.zip
         dest: /home/larap
+    - name: "Instalar el paquete mariadb"
+      apt:
+        name: mariadb-server

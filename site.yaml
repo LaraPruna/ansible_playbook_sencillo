@@ -19,4 +19,11 @@
         dest: /home/larap
     - name: "Instalar el paquete mariadb"
       apt:
-        name: mariadb-server
+        name:
+          - mariadb-server
+          - python3-pymysql
+    - name: "Crear una base de datos"
+      mysql_db:
+        name: larap_wordpress
+        state: present
+        

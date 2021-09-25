@@ -12,18 +12,23 @@
       get_url:
         url: https://wordpress.org/latest.zip
         dest: /home/larap
+    - name: "Instalar el paquete mariadb"
+      apt:
+        name:
+          - unzip
+          - mariadb-server
+          - python3-mysqldb
     - name: "Descomprimir fichero"
       unarchive:
         remote_src: yes
         src: /home/larap/wordpress-5.8.1.zip
         dest: /home/larap
-    - name: "Instalar el paquete mariadb"
-      apt:
-        name:
-          - mariadb-server
-          - python3-pymysql
-    - name: "Crear una base de datos"
+    - name: "Crear una base de datos en mariadb"
       mysql_db:
         name: larap_wordpress
         state: present
-        
+    - name: "Crear usuario en la base de datos"
+      mysql_user:
+        name: larap
+        password: $y$j9T$3MMrs9Ot9YJWGK35VJiJS/$6cIR6UmpWl8WTunYLtjaYldKLKylMpRuOrMx5YH.VO2
+        priv: larap_wordpress.*:ALL,GRANT

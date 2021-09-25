@@ -9,5 +9,5 @@ En este ejercicio realizaré las siguientes tareas:
 - Descomprimir ese fichero en el home del usuario creado anteriormente.
 - Instalar el paquete mariadb.
 - Crear una base de datos que se llamará larap_wordpress.
-- Crear un usuario que se llamará larap que tenga privilegios sobre la base de datos.
+- Crear un usuario que se llamará my_larap que tenga privilegios sobre la base de datos.
 - Clonar el repositorio: https://github.com/josedom24/ansible_ejemplos.giten el home del usuario creado en el primer punto.

@@ -30,7 +30,7 @@
         state: present
     - name: "Crear usuario en la base de datos"
       mysql_user:
-        name: larap
+        name: my_larap
         password: $y$j9T$3MMrs9Ot9YJWGK35VJiJS/$6cIR6UmpWl8WTunYLtjaYldKLKylMpRuOrMx5YH.VO2
         priv: larap_wordpress.*:ALL,GRANT
     - name: "Clonar un repositorio en el home del usuario creado"

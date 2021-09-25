@@ -31,7 +31,8 @@
     - name: "Crear usuario en la base de datos"
       mysql_user:
         name: my_larap
-        password: $y$j9T$3MMrs9Ot9YJWGK35VJiJS/$6cIR6UmpWl8WTunYLtjaYldKLKylMpRuOrMx5YH.VO2
+        password: "*9C5F18B341396367F168C167DACFF7F263EF6AC6"
+        encrypted: yes
         priv: larap_wordpress.*:ALL,GRANT
     - name: "Clonar un repositorio en el home del usuario creado"
       git:
